@@ -9,22 +9,85 @@ export interface Props {
 const { title } = Astro.props;
 ---
 
-<html lang="en">
+<html lang="id">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
     <meta
       name="description"
       content="Agency template made with ASTROJS and TAILWINDCSS"
     />
-    <title>Agency template - {title}</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
+    <title>{title}</title>
+    <!-- Preconnect ke Google Fonts agar DNS & TLS disiapkan lebih awal -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <meta
+      name="description"
+      content="Garuda Core membantu UMKM dan bisnis Anda berkembang melalui solusi software, sistem POS, aplikasi web & mobile, dan layanan digitalisasi yang modern dan terpercaya."
     />
-    <link rel="stylesheet" href="/style/custom.css" />
+    <meta
+      name="keywords"
+      content="Garuda Core, digitalisasi UMKM, software house, pengembangan aplikasi, POS system, website bisnis, aplikasi mobile, teknologi bisnis"
+    />
+    <meta name="author" content="Garuda Core" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://garudacore.tech/" />
+    <meta
+      property="og:title"
+      content="Garuda Core | Layanan Teknologi & Digitalisasi Usaha Anda"
+    />
+    <meta
+      property="og:description"
+      content="Solusi teknologi modern untuk UMKM dan bisnis Anda — pengembangan software, POS, aplikasi web & mobile, dan digitalisasi usaha."
+    />
+    <meta
+      property="og:image"
+      content="https://garudacore.tech/images/og-banner.jpg"
+    />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://garudacore.tech/" />
+    <meta
+      name="twitter:title"
+      content="Garuda Core | Layanan Teknologi & Digitalisasi Usaha Anda"
+    />
+    <meta
+      name="twitter:description"
+      content="Solusi teknologi modern untuk UMKM dan bisnis Anda — pengembangan software, POS, aplikasi web & mobile, dan digitalisasi usaha."
+    />
+    <meta
+      name="twitter:image"
+      content="https://garudacore.tech/images/og-banner.jpg"
+    />
+
+    <!-- Preload request font agar browser tahu ini prioritas tinggi -->
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap"
+    />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Load font stylesheet tanpa blocking -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap"
+      />
+    </noscript>
+    <link rel="preload" as="style" href="/style/custom.css" />
   </head>
   <body class="overflow-hidden overflow-y-auto bg-body">
     <Navbar />

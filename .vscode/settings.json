@@ -5,5 +5,20 @@
   "svg.preview.background": "editor",
   "[astro]": {
     "editor.defaultFormatter": "astro-build.astro-vscode"
-  }
+  },
+  "cSpell.language": "en,id",
+  "cSpell.languageSettings": [],
+  "cSpell.words": [
+    "aggitate",
+    "Analylitics",
+    "ASTROJS",
+    "Digitalmu",
+    "Gradiant",
+    "Navitem",
+    "painpoint",
+    "Raleway",
+    "rgba",
+    "terpercaya",
+    "togglenav"
+  ]
 }
